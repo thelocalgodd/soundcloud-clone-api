@@ -10,10 +10,9 @@ const trackSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  genre: String,
-  duration: {
-    type: Number,
-  },
+  genre: Array,
+  duration: Number,
+  releaseyear: Number,
   link: {
     type: String,
     unique: true,
