@@ -12,7 +12,7 @@ const Settings = () => {
         <Image source={shazamLogo} />
         <Text>Save your Shazams</Text>
         <Pressable styles={{ backgroundColor: "blue", color: "white" }}>
-          SIGN UP OR LOG IN
+          <Text>SIGN UP OR LOG IN</Text>
         </Pressable>
       </View>
       <View>

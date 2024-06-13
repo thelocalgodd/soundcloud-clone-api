@@ -4,7 +4,7 @@ require("dotenv").config();
 const app = express();
 app.use(express.json());
 
-const PORT = process.env.PORT || 3000;
+const PORT = 3000;
 
 // Connect to MongoDB
 const db = require("../db.js");
@@ -19,8 +19,10 @@ app.get("/", (req, res) => {
 
 app.get("/tracks", async (req, res) => {
   const tracks = await Tracks.find();
+  const trackCount = await Tracks.find().countDocuments();
 
   res.json({
+    "tracks found": trackCount,
     tracks,
   });
 });
