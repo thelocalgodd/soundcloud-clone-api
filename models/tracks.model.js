@@ -5,6 +5,7 @@ const trackSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  photo: String,
   artist: {
     type: String,
     required: true,
@@ -12,11 +13,9 @@ const trackSchema = new mongoose.Schema({
   genre: String,
   duration: {
     type: Number,
-    required: true,
   },
   link: {
     type: String,
-    required: true,
     unique: true,
   },
 });
